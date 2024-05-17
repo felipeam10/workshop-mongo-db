@@ -1,6 +1,8 @@
 package com.felipe.workshopmongodb.services;
 
+import com.felipe.workshopmongodb.models.dto.PostDTO;
 import com.felipe.workshopmongodb.models.dto.UserDTO;
+import com.felipe.workshopmongodb.models.entities.Post;
 import com.felipe.workshopmongodb.models.entities.User;
 import com.felipe.workshopmongodb.repositories.UserRepository;
 import com.felipe.workshopmongodb.services.exceptions.ResourceNotFoundException;
@@ -44,6 +46,12 @@ public class UserService {
         getEntityById(id);
         repository.deleteById(id);
     }
+
+    public List<PostDTO> getUserPosts(String id) {
+        User user = getEntityById(id);
+        return user.getPosts().stream().map(x -> new PostDTO(x)).collect(Collectors.toList());
+    }
+
     private void copyDtoToEntity(UserDTO dto, User entity) {
         entity.setName(dto.getName());
         entity.setEmail(dto.getEmail());
