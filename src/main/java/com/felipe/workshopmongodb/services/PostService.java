@@ -29,4 +29,9 @@ public class PostService {
         return result.orElseThrow(() -> new ResourceNotFoundException("Objeto não encontrado"));
     }
 
+    public List<PostDTO> findByTitle(String text) {
+        List<Post> list = repository.findByTitleContainingIgnoreCase(text);
+        return list.stream().map(x -> new PostDTO(x)).collect(Collectors.toList());
+    }
+
 }
