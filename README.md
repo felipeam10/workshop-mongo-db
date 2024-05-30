@@ -128,7 +128,7 @@ Consulta detalhada
 
 ### Introdução NoSQL
 
-[![Image](https://img.youtube.com/vi/c6h5eR0TvfU/mqdefault.jpg "Vídeo no Youtube")](https://youtu.be/c6h5eR0TvfU)
+https://youtu.be/c6h5eR0TvfU
 
 ### Documentação MongoDB: query operators
 
@@ -144,5 +144,5 @@ https://stackoverflow.com/questions/43181654/locating-data-volumes-in-docker-des
 
 ### Vídeo sobre tratamento de exceções
 
-[![Image](https://img.youtube.com/vi/MAv7xgnSD-s/mqdefault.jpg "Vídeo no Youtube")](https://youtu.be/MAv7xgnSD-s)
+https://youtu.be/MAv7xgnSD-s
 
